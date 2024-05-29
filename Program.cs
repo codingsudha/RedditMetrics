@@ -1,0 +1,15 @@
+﻿using Reddit;
+
+Console.WriteLine("Enter Name");
+string name = Console.ReadLine();
+Console.WriteLine($"Hello, {name}!");
+
+//Print Reddit Username
+var reddit = new RedditClient(accessToken: "eyJhbGciOiJSUzI1NiIsImtpZCI6IlNIQTI1NjpzS3dsMnlsV0VtMjVmcXhwTU40cWY4MXE2OWFFdWFyMnpLMUdhVGxjdWNZIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNzE2MzQ1OTE3LjE1NzI1NywiaWF0IjoxNzE2MjU5NTE3LjE1NzI1NywianRpIjoieGR4djJDWlpreGVqc3RuUm4wcUR2RzBrUUZ6Z2lBIiwiY2lkIjoiWlRLMGNBRmpUQi1BVDdCS2Y4OU9QUSIsImxpZCI6InQyX3dpbWN1NWJtbyIsImFpZCI6InQyX3dpbWN1NWJtbyIsImxjYSI6MTcxMDg2MTQzMTE1NSwic2NwIjoiZUp3MHlrRUtBakVNQmRDN19IVnVKQzVhazJyQU5wS2tRbThfekpUWlB0NERVZjRDZ3JBbUNIM0ZyQzdNbWdGQ3pOcTNHNzlzTkgyRDRGSjRVX3NXOVV0LTVtZTdRVmxHYWk0UVBocHB2dkE4QWdBQV9fLVRNQ1FyIiwicmNpZCI6Im5PY2F2UlNWWmpwUlJFSjNfdkZPckFxNHgyOXRmLWN5c21rWlFlT0ZMQXciLCJmbG8iOjh9.msFp-VFngMvrofOaEWDHiT1K40maYzz7_JnYnhJP6q2g708qepTPJc4PIW2YPNCp6whB-009QQkKjF5vFX21CLKyruaSb_0LUukr6kmcawCQmBzsbwsWsoeFCsNZGh_cqp1HYfSBwQWrCpVkYTb1G_idXaigVLNJJ2JDlQXmF1g-BDeCq_rw2Q13qEg89NteoMUbIfJYqVZokK2HWMRoy1O-T7ed_HrDTgBplJOb7Ydt7ydGjrK47ztk0XYzne0-Et3Z25BEehW_tDgLo0o5osJ4bSkzSRk4ylTEIAD88CT87Xp5FGV8lCzV7TW04AI4SCKJTcU300UKmK5WxJ1qww");
+Console.WriteLine("Username: " + reddit.Account.Me.Name);
+Console.WriteLine("Cake Day: " + reddit.Account.Me.Created.ToString("D"));
+Console.WriteLine("Subreddit: " + reddit.Subreddit().Name);
+
+
+
+
